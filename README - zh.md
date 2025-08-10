@@ -142,6 +142,12 @@ original version 版本的CSS中使用了`div[class*="ListItemContainer-"]`选�
 
 CSS规则中强制设置的`max-width: 120px`本意是针对侧边栏项，但错误地应用到了需要全宽以展示模型名称和描述的模型列表项。
 
+## 4 数据设置与其他设置显示bug
+
+数据设置与其他设置中，第二列都会显示错误，图标与文字相互挤压导致上下排列。
+
+修复后的文件CherryYou patch version-v04.css
+
 
 
 > 如果Cherry-Blossom-CSS项目中涉及到的任何CSS代码的引用来源标注不正确，请原作者通过Github issue与本项目进行联系，提供可信的说明与佐证后，本项目会立刻进行引用错误的修改。

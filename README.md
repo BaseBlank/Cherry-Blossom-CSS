@@ -150,6 +150,18 @@ The bug appears as follows:
 
 
 
+## 4 Display Bug in Data Settings and Other Settings
+
+In both Data Settings and Other Settings, the second column always displays incorrectly, with the icon and text squeezed together and stacking vertically.
+
+CherryYou patch version-v04.css
+
+This commit fixes a UI bug in the Settings menu where navigation items were incorrectly stacked vertically and long text was truncated. The root cause was an overly broad CSS selector that improperly targeted menu list items, disrupting their flexbox layout. The fix removes this problematic selector and introduces new, specific rules to enforce the correct horizontal alignment for icons and text. Additionally, width and overflow properties were adjusted to ensure full menu item text is always visible without truncation.
+
+Resolved a CSS layout issue in the Settings menu caused by the overly broad `div[class^="SettingGroup-"] label` selector. This selector inadvertently applied container styles to menu list items, breaking their flex layout. The fix removes this rule entirely and adds specific styles for `div[class*="ListItemContent"]` to enforce `display: flex` and for `.ant-typography` to prevent text truncation, fully restoring the intended horizontal menu design.
+
+
+
 > If any of the CSS code sources cited in the Cherry-Blossom-CSS project are incorrect, original authors are encouraged to contact this project via a Github issue. Once credible information and evidence are provided, any citation errors will be corrected immediately.
 
 
